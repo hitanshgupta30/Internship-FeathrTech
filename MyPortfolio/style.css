@@ -53,8 +53,9 @@ main{
     stroke:#547fa8;
     stroke-width:4px;
     stroke-linecap:round;
-    stroke-dasharray: 0 12px;
+    stroke-dasharray: 0 15px;
     opacity:0.8;
+    animation: flow 2s linear infinite;
 }
 /* ---------- CENTER CARD ---------- */
 .center-card{
@@ -193,4 +194,9 @@ main{
 .node.active{
     transform:scale(1.12);
     background:#547fa8;
+}
+@keyframes flow {
+    to {
+        stroke-dashoffset: -30px; 
+    }
 }
