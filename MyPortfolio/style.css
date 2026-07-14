@@ -51,8 +51,9 @@ main{
 .connections path{
     fill:none;
     stroke:#547fa8;
-    stroke-width:2;
+    stroke-width:4px;
     stroke-linecap:round;
+    stroke-dasharray: 0 12px;
     opacity:0.8;
 }
 /* ---------- CENTER CARD ---------- */
