@@ -1,0 +1,191 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07111d;
+    color:white;
+    overflow:hidden;
+}
+/* ---------- GRID BACKGROUND ---------- */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(70,120,170,.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(70,120,170,.18) 1px, transparent 1px);
+    background-size:60px 60px;
+    z-index:-2;
+}
+header{
+    position:absolute;
+    top:35px;
+    left:40px;
+    z-index:100;
+}
+header h1{
+    font-size:34px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+main{
+    position:relative;
+    width:100vw;
+    height:100vh;
+}
+/* ---------- SVG ---------- */
+.connections{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.connections path{
+    fill:none;
+    stroke:#547fa8;
+    stroke-width:2;
+    stroke-linecap:round;
+    opacity:0.8;
+}
+/* ---------- CENTER CARD ---------- */
+.center-card{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    border:2px solid #547fa8;
+    background:#101b28;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.center-card img{
+    width:110px;
+    height:110px;
+    object-fit:cover;
+    border-radius:50%;
+    border:2px solid #547fa8;
+    margin-bottom:15px;
+}
+.center-card h2{
+    margin-bottom:8px;
+}
+.center-card p{
+    color:#9fb7cf;
+}
+
+/* ---------- NODE ---------- */
+
+.node{
+    position:absolute;
+    background:#111d2a;
+    border:1px solid #547fa8;
+    border-radius:16px;
+    padding:14px 28px;
+    font-size:17px;
+    cursor:pointer;
+    transition:transform .3s, background .3s;
+}
+.node:hover{
+    background:#547fa8;
+    color:white;
+    transform:scale(1.05);
+}
+/* ---------- POSITIONS ---------- */
+.projects{
+    top:8%;
+    left:50%;
+}
+.about{
+    top:28%;
+    left:8%;
+}
+.skills{
+    top:28%;
+    right:8%;
+}
+.strengths{
+    top:50%;
+    left:3%;
+}
+.contact{
+    top:50%;
+    right:3%;
+}
+.education{
+    bottom:10%;
+    left:18%;
+}
+.experience{
+    bottom:10%;
+    right:18%;
+}
+
+#info-panel{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) scale(0.8);
+    width:380px;
+    min-height:250px;
+    background:#101b28;
+    border:2px solid #547fa8;
+    border-radius:20px;
+    padding:30px;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    color:white;
+    z-index:150;
+}
+#close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #547fa8;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+
+#close-btn:hover {
+    color: white;
+    transform: scale(1.15);
+}
+
+#info-panel.show{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%, -50%) scale(1);
+}
+
+#panel-title{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+#panel-content{
+    line-height:1.8;
+    color:#bfd1e2;
+}   
+.node.active{
+    transform:scale(1.12);
+    background:#547fa8;
+}
