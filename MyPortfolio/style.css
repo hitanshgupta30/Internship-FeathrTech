@@ -105,11 +105,16 @@ main{
     font-size:17px;
     cursor:pointer;
     transition:transform .3s, background .3s;
+    animation: idlePulse 1s ease-in-out infinite;
+    transition: box-shadow 0.3s ease-in-out;
 }
 .node:hover{
     background:#547fa8;
     color:white;
     transform:scale(1.05);
+    animation-play-state: paused;
+    box-shadow: 0 0 30px 8px rgba(59, 140, 216, 0.6);
+
 }
 /* ---------- POSITIONS ---------- */
 .projects{
@@ -157,6 +162,8 @@ main{
     transition:.35s;
     color:white;
     z-index:150;
+    box-shadow: 0 0 30px 8px rgba(59, 140, 216, 0.6);
+
 }
 #close-btn {
     position: absolute;
@@ -194,9 +201,18 @@ main{
 .node.active{
     transform:scale(1.12);
     background:#547fa8;
+    animation-play-state: paused;
 }
 @keyframes flow {
     to {
         stroke-dashoffset: -30px; 
+    }
+}
+@keyframes idlePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
     }
 }
