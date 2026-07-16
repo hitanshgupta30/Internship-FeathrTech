@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #a5cc81;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2e4d14;
+        }
+        
+        .input-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px; 
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 60px 10px 12px; 
+            border: 1px solid #7da657;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            background-color: #ffffff;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+        }
+        .ok-btn {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%); 
+            padding: 6px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .ok-btn:hover {
+            background-color: #45a049;
+        }
+
+        .ok-btn:active {
+            transform: translateY(-50%) scale(0.95); 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fill this form</h1>
+    </header>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <div class="input-container">
+            <input type="text" id="name" name="name" required>
+            <button type="button" id="nameButton" class="ok-btn">Ok</button>
+        </div>
+
+        <label for="email">Email:</label>
+        <div class="input-container">
+            <input type="email" id="email" name="email" required>
+            <button type="button" id="emailButton" class="ok-btn">Ok</button>
+        </div>
+
+        <label for="age">Age:</label>
+        <div class="input-container">
+            <input type="number" id="age" name="age" min="0">
+            <button type="button" id="ageButton" class="ok-btn">Ok</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
