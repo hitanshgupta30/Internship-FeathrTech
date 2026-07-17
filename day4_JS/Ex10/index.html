@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #user {
+            margin-top: 20px;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #loading {
+            color: blue;
+        }
+
+        #error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Random User Generator</h2>
+
+    <button id="fetchBtn">Fetch User</button>
+
+    <p id="loading"></p>
+
+    <p id="error"></p>
+
+    <div id="user"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
