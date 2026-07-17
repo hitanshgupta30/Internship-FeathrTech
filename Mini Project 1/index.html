@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Task Manager!</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="particles"></div>
+    <div class="background-target">🎯</div>
+    <header>
+      <h1>Task Manager</h1>
+      <button id="theme-toggle">🌙</button>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <form id="task-form">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Add a new task..."
+            required
+            autocomplete="off"
+          />
+          <button type="submit" aria-label="Add Task">
+            <i data-lucide="plus">ADD</i>
+          </button>
+        </form>
+      </section>
+
+      <section class="filter-section">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </section>
+
+      <section class="list-section">
+        <ul id="task-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
