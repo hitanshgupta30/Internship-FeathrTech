@@ -1,0 +1,80 @@
+.button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button.primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.button.secondary {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.button.danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 0;
+  background-color: white;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card-footer {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.completed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge.in-progress {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
