@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "../components/Input";
 import TaskList from "../components/TaskList";
+import Modal from "../components/Modal";
 
 function Dashboard() {
   const [tasks, setTasks] = useState([
@@ -71,10 +72,14 @@ function Dashboard() {
   ]);
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
+  const [selectedTask, setSelectedTask] = useState(null)
 
   function handleDelete(id) {
     setTasks(tasks.filter((task) => task.id !== id));
   }
+  function handleTaskClick(task) {
+  setSelectedTask(task);
+}
   const filteredTasks = tasks.filter((task) => {
     const search = searchTerm.toLowerCase();
 
@@ -110,7 +115,13 @@ function Dashboard() {
         </select>
       </div>
 
-      <TaskList tasks={filteredTasks} onDelete={handleDelete} />
+      <TaskList tasks={filteredTasks} onDelete={handleDelete} onTaskClick={handleTaskClick} />
+      {selectedTask && (
+      <Modal
+        task={selectedTask}
+        onClose={() => setSelectedTask(null)}
+      />
+    )}
     </div>
   );
 }

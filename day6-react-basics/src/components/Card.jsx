@@ -1,6 +1,8 @@
-function Card({ title, description, footer, children }) {
+function Card({ title, description, footer, children, onClick, }) {
   return (
-    <div className="card">
+    <div className="card"
+      onClick={onClick}
+    >
       <h2>{title}</h2>
 
       {description && <p>{description}</p>}

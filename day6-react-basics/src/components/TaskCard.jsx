@@ -2,12 +2,13 @@ import Card from "./Card";
 import Badge from "./Badge";
 import Button from "./Button";
 
-function TaskCard({ task, onDelete }) {
+function TaskCard({ task, onDelete, onTaskClick }) {
   return (
     <Card
       title={task.title}
       description={task.description}
       footer={`Due: ${task.dueDate}`}
+      onClick={()=>onTaskClick(task)}
     >
       <p>
         <strong>Priority:</strong> {task.priority}

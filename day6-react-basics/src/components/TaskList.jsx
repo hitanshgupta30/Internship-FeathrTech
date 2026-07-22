@@ -1,6 +1,6 @@
 import TaskCard from "./TaskCard";
 
-function TaskList({ tasks, onDelete }) {
+function TaskList({ tasks, onDelete, onTaskClick }) {
   return (
     <div className="task-list">
       {tasks.map((task) => (
@@ -8,6 +8,7 @@ function TaskList({ tasks, onDelete }) {
           key={task.id}
           task={task}
           onDelete={onDelete}
+          onTaskClick={onTaskClick}
         />
       ))}
     </div>
