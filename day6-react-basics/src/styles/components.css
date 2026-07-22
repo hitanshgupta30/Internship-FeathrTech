@@ -78,3 +78,25 @@
   outline: none;
   border-color: #2563eb;
 }
+
+.dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.task-list .card {
+  margin: 0;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
