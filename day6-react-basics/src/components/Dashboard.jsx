@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Input from "../components/Input";
 import TaskList from "../components/TaskList";
 
 function Dashboard() {
@@ -68,21 +69,48 @@ function Dashboard() {
       dueDate: "22 July",
     },
   ]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState("All");
 
   function handleDelete(id) {
     setTasks(tasks.filter((task) => task.id !== id));
   }
+  const filteredTasks = tasks.filter((task) => {
+    const search = searchTerm.toLowerCase();
+
+    const matchesSearch =
+      task.title.toLowerCase().includes(search) ||
+      task.description.toLowerCase().includes(search);
+
+    const matchesStatus =
+      statusFilter === "All" || task.status === statusFilter;
+
+    return matchesSearch && matchesStatus;
+  });
 
   return (
     <div className="dashboard">
       <h1>Task Dashboard</h1>
 
       <p>Manage your tasks and track your progress.</p>
+      <div className="search-filter">
+        <Input
+          placeholder="Search tasks..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <select
+          value={statusFilter}
+          onChange={(e) => setStatusFilter(e.target.value)}
+        >
+          <option value="All">All</option>
+          <option value="Completed">Completed</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+        </select>
+      </div>
 
-      <TaskList
-        tasks={tasks}
-        onDelete={handleDelete}
-      />
+      <TaskList tasks={filteredTasks} onDelete={handleDelete} />
     </div>
   );
 }
