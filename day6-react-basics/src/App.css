@@ -1,8 +1,10 @@
-* {
-  box-sizing: border-box;
+.app {
+  min-height: 100vh;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
 }

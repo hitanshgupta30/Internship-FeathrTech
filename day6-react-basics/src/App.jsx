@@ -1,8 +1,31 @@
+import { useState, useEffect } from "react";
 import Dashboard from "./components/Dashboard";
-import "./styles/components.css";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
-  return <Dashboard />;
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "light"
+  );
+
+  useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  function handleThemeToggle() {
+    setTheme(theme === "light" ? "dark" : "light");
+  }
+
+  return (
+    <div className="app">
+      <ThemeToggle
+        theme={theme}
+        onToggle={handleThemeToggle}
+      />
+
+      <Dashboard />
+    </div>
+  );
 }
 
 export default App;

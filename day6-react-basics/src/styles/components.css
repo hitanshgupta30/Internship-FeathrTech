@@ -139,3 +139,43 @@
 .modal button {
   margin-top: 20px;
 }
+
+body.light {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark .dashboard {
+  color: #ffffff;
+}
+
+body.dark .card {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #555555;
+}
+body.dark .modal {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+body.dark .modal button {
+  color: #ffffff;
+}
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
