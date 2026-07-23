@@ -72,14 +72,14 @@ function Dashboard() {
   ]);
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
-  const [selectedTask, setSelectedTask] = useState(null)
+  const [selectedTask, setSelectedTask] = useState(null);
 
   function handleDelete(id) {
     setTasks(tasks.filter((task) => task.id !== id));
   }
   function handleTaskClick(task) {
-  setSelectedTask(task);
-}
+    setSelectedTask(task);
+  }
   const filteredTasks = tasks.filter((task) => {
     const search = searchTerm.toLowerCase();
 
@@ -115,13 +115,18 @@ function Dashboard() {
         </select>
       </div>
 
-      <TaskList tasks={filteredTasks} onDelete={handleDelete} onTaskClick={handleTaskClick} />
+      {filteredTasks.length > 0 ? (
+        <TaskList
+          tasks={filteredTasks}
+          onDelete={handleDelete}
+          onTaskClick={handleTaskClick}
+        />
+      ) : (
+        <p>No tasks found.</p>
+      )}
       {selectedTask && (
-      <Modal
-        task={selectedTask}
-        onClose={() => setSelectedTask(null)}
-      />
-    )}
+        <Modal task={selectedTask} onClose={() => setSelectedTask(null)} />
+      )}
     </div>
   );
 }
