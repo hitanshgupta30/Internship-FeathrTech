@@ -8,7 +8,7 @@ function TaskCard({ task, onDelete, onTaskClick }) {
       title={task.title}
       description={task.description}
       footer={`Due: ${task.dueDate}`}
-      onClick={()=>onTaskClick(task)}
+      onClick={() => onTaskClick(task)}
     >
       <p>
         <strong>Priority:</strong> {task.priority}
@@ -20,7 +20,10 @@ function TaskCard({ task, onDelete, onTaskClick }) {
         <Button
           text="Delete"
           variant="danger"
-          onClick={() => onDelete(task.id)}
+          onClick={(e) => {
+            e.stopPropagation();
+            onDelete(task.id);
+          }}
         />
       </div>
     </Card>
