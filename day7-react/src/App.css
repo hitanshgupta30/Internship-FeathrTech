@@ -1,0 +1,118 @@
+.app-shell {
+  padding: 2rem;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.nav-link.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.page h2 {
+  margin-top: 0;
+}
+
+.user-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  box-sizing: border-box;
+}
+
+.char-counter {
+  color: #6b7280;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.char-counter.over-limit {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.search-error {
+  color: #dc2626;
+  margin-top: 0.5rem;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  background: #f9fafb;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-card:hover {
+  background: #eef2ff;
+}
+
+.user-details {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid #c7d2fe;
+  border-radius: 0.75rem;
+  background: #eff6ff;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.close-button {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.user-placeholder {
+  margin-top: 1.25rem;
+  color: #6b7280;
+}
