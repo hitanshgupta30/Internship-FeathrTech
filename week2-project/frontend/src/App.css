@@ -1,0 +1,10 @@
+.app {
+  min-height: 100vh;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}

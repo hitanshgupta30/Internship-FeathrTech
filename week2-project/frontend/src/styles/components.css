@@ -1,0 +1,181 @@
+.button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button.primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.button.secondary {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.button.danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 0;
+  background-color: white;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card-footer {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.completed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge.in-progress {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.task-list .card {
+  margin: 0;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.search-filter {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-filter select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  text-align: left;
+}
+
+.modal button {
+  margin-top: 20px;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark .dashboard {
+  color: #ffffff;
+}
+
+body.dark .card {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #555555;
+}
+body.dark .modal {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+body.dark .modal button {
+  color: #ffffff;
+}
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
